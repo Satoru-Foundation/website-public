@@ -14259,10 +14259,11 @@ body.megamenu-popup-active .mobile-nav__content {
 }
 
 .product-description__images {
+    padding-top: 25px;
     flex: 1;
     display: grid; /* Use grid layout for images */
     grid-template-columns: 1fr; /* Single column for images */
-    gap: 10px; /* Add space between images */
+    gap: 100px; /* Add space between images */
 }
 
 .product-description__images img {

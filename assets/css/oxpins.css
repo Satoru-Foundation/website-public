@@ -19,7 +19,7 @@
 :root {
   --oxpins-font: "Manrope", sans-serif;
   --oxpins-font-two: "Nunito", sans-serif;
-  --oxpins-font-three: "Caveat", cursive;
+  --oxpins-font-three: "Times New Roman", sans-serif;
   --oxpins-gray: #6f7775;
   --oxpins-gray-rgb: 111, 119, 117;
   --oxpins-white: #ffffff;
@@ -4989,7 +4989,7 @@ body.locked .page-wrapper {
 }
 
 .footer-widget__about-text {
-  color: #98a8a5;
+  color: white;
   font-weight: 400;
 }
 
@@ -5045,7 +5045,7 @@ body.locked .page-wrapper {
   position: relative;
   display: inline-block;
   font-size: 15px;
-  color: #98a8a5;
+  color: white;
   font-weight: 400;
   transition: all 500ms ease;
 }
@@ -5097,7 +5097,7 @@ body.locked .page-wrapper {
   position: relative;
   display: inline-block;
   font-size: 15px;
-  color: #98a8a5;
+  color: white;
   font-weight: 400;
   transition: all 500ms ease;
 }
@@ -5133,7 +5133,7 @@ body.locked .page-wrapper {
 }
 
 .footer-widget__contact-text {
-  color: #98a8a5;
+  color: white;
   font-weight: 400;
   padding-bottom: 10px;
 }
@@ -10906,7 +10906,9 @@ body.locked .page-wrapper {
 }
 
 .about-four__text {
-  font-size: 16px;
+  font-size: 18px;
+  margin:auto;
+  color: var(--oxpins-black);
 }
 
 .about-four__points {
@@ -14278,6 +14280,7 @@ body.megamenu-popup-active .mobile-nav__content {
 }
 
 .product-description__content {
+  margin-top: 25px;
     flex: 2; /* Allocate more space to the content */
 }
 

@@ -47,6 +47,55 @@
 
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/oxpins.css" />
+
+    <style>
+         .slideshow-container {
+            width: 80%;
+            max-width: 1000px;
+            overflow: hidden;
+            position: relative;
+            margin: auto;
+        }
+        .slide {
+            display: none;
+            width: 100%;
+            height: 600px;
+        }
+        .slide img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .active {
+            display: block;
+            animation: fade 0.7s ease-in-out;
+        }
+        @keyframes fade {
+            from { opacity: 0.9; }
+            to { opacity: 1; }
+        }
+        .nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 20px;
+            z-index: 10;
+            border-radius: 5px;
+        }
+        .prev {
+            left: 10px;
+        }
+        .next {
+            right: 10px;
+        }
+        .nav-button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    </style>
 </head>
 
 <body class="custom-cursor">
@@ -112,7 +161,7 @@
                                             <a href="job.html">Work with Us</a>
                                         </li>
                                          <li>
-                                            <a href="gallery.html">Gallery</a>
+                                            <a href="gallery.html">Media</a>
                                         </li>
                                         <li>
                                             <a href="contact.html">Contact info</a>
@@ -149,114 +198,57 @@
                     <ul class="thm-breadcrumb list-unstyled">
                         <li><a href="index.html">Home</a></li>
                         <li><span>/</span></li>
-                        <li class="active">Gallery</li>
+                        <li class="active">Media</li>
                     </ul>
-                    <h2>Gallery</h2>
+                    <h2>Media</h2>
                 </div>
             </div>
         </section>
         <!--Page Header End-->
 
-        <br><br> <br><br> <br><br>
+        <p style="font-size: x-large;text-align: center;margin-top: 20px;color: black;">The images are from the project field sites run by the Satoru Foundation.
+            </p>
 
-      <!--Gallery Section Start-->
-<section class="gallery">
-    <div class="container">
-        <div class="row">
-            <!--Gallery Item Start-->
-            <div class="col-md-4">
-                <div class="gallery__item">
-                    <img src="assets/images/gallery/1.png" alt="Gallery Image 1" class="img-fluid">
-                </div>
-            </div>
-            <!--Gallery Item End-->
-            <!--Gallery Item Start-->
-            <div class="col-md-4">
-                <div class="gallery__item">
-                    <img src="assets/images/gallery/2.png" alt="Gallery Image 2" class="img-fluid">
-                </div>
-            </div>
-            <!--Gallery Item End-->
-            <!--Gallery Item Start-->
-            <div class="col-md-4">
-                <div class="gallery__item">
-                    <img src="assets/images/gallery/3.png" alt="Gallery Image 3" class="img-fluid">
-                </div>
-            </div>
-            <!--Gallery Item End-->
-        </div>
-        <div class="row">
-            <!--Gallery Item Start-->
-            <div class="col-md-4">
-                <div class="gallery__item">
-                    <img src="assets/images/gallery/4.png" alt="Gallery Image 4" class="img-fluid">
-                </div>
-            </div>
-            <!--Gallery Item End-->
-            <!--Gallery Item Start-->
-            <div class="col-md-4">
-                <div class="gallery__item">
-                    <img src="assets/images/gallery/5.png" alt="Gallery Image 5" class="img-fluid">
-                </div>
-            </div>
-            <!--Gallery Item End-->
-            <!--Gallery Item Start-->
-            <div class="col-md-4">
-                <div class="gallery__item">
-                    <img src="assets/images/gallery/6.png" alt="Gallery Image 6" class="img-fluid">
-                </div>
-            </div>
-            <!--Gallery Item End-->
-            <!--Gallery Item Start-->
-            <div class="col-md-4">
-                <div class="gallery__item">
-                    <img src="assets/images/gallery/7.png" alt="Gallery Image 6" class="img-fluid">
-                </div>
-            </div>
-            <!--Gallery Item End-->
-            <!--Gallery Item Start-->
-            <div class="col-md-4">
-                <div class="gallery__item">
-                    <img src="assets/images/gallery/8.png" alt="Gallery Image 6" class="img-fluid">
-                </div>
-            </div>
-            <!--Gallery Item End-->
-            <!--Gallery Item Start-->
-            <div class="col-md-4">
-                <div class="gallery__item">
-                    <img src="assets/images/gallery/9.png" alt="Gallery Image 6" class="img-fluid">
-                </div>
-            </div>
-            <!--Gallery Item End-->
-            <!--Gallery Item Start-->
-            <div class="col-md-4">
-                <div class="gallery__item">
-                    <img src="assets/images/gallery/10.png" alt="Gallery Image 6" class="img-fluid">
-                </div>
-            </div>
-            <!--Gallery Item End-->
-            <!--Gallery Item Start-->
-            <div class="col-md-4">
-                <div class="gallery__item">
-                    <img src="assets/images/gallery/11.png" alt="Gallery Image 6" class="img-fluid">
-                </div>
-            </div>
-            <!--Gallery Item End-->
-            <!--Gallery Item Start-->
-            <div class="col-md-4">
-                <div class="gallery__item">
-                    <img src="assets/images/gallery/12.png" alt="Gallery Image 6" class="img-fluid">
-                </div>
-            </div>
-            <!--Gallery Item End-->
-        </div>
-    </div>
-</section>
-<!--Gallery Section End-->
+        <br>
+        <div class="slideshow-container">
+            <button class="nav-button prev" onclick="changeSlide(-1)">❮</button>
 
+            <div class="slide active"><img src="assets/images/gallery/1.png" alt="Gallery Image 1"></div>
+            <div class="slide"><img src="assets/images/gallery/2.png" alt="Gallery Image 2"></div>
+            <div class="slide"><img src="assets/images/gallery/3.png" alt="Gallery Image 3"></div>
+            <div class="slide"><img src="assets/images/gallery/4.png" alt="Gallery Image 4"></div>
+            <div class="slide"><img src="assets/images/gallery/5.png" alt="Gallery Image 5"></div>
+            <div class="slide"><img src="assets/images/gallery/6.png" alt="Gallery Image 6"></div>
+            <div class="slide"><img src="assets/images/gallery/7.png" alt="Gallery Image 7"></div>
+            <div class="slide"><img src="assets/images/gallery/8.png" alt="Gallery Image 8"></div>
+            <div class="slide"><img src="assets/images/gallery/9.png" alt="Gallery Image 9"></div>
+            <div class="slide"><img src="assets/images/gallery/10.png" alt="Gallery Image 10"></div>
+            <div class="slide"><img src="assets/images/gallery/11.png" alt="Gallery Image 11"></div>
+            <div class="slide"><img src="assets/images/gallery/12.png" alt="Gallery Image 12"></div>
+
+            <button class="nav-button next" onclick="changeSlide(1)">❯</button>
+        </div>
+    
+        <script>
+            let index = 0;
+            const slides = document.querySelectorAll(".slide");
+        
+            function showSlide(newIndex) {
+                slides.forEach(slide => slide.classList.remove("active"));
+                slides[newIndex].classList.add("active");
+                index = newIndex;
+            }
+        
+            function changeSlide(direction) {
+                let newIndex = (index + direction + slides.length) % slides.length;
+                showSlide(newIndex);
+            }
+        
+            setInterval(() => changeSlide(1), 5000); // Auto-change slide every 5 seconds
+        </script>
 
         <!--Google Map End-->
- <br><br> <br><br>
+ <br><br> <br>
         <!--Site Footer Start-->
         <!--Site Footer Start-->
         <footer class="site-footer">
@@ -285,7 +277,7 @@
                                   <li><a href="index.html">Home</a></li>
                                     <li><a href="about.html">About us</a></li>
                                     <li><a href="job.html">Work With Us</a></li>
-                                    <li><a href="gallery.html">Gallery</a></li>
+                                    <li><a href="gallery.html">Media</a></li>
                                     <li><a href="contact.html">Contact</a></li>
                                 </ul>
                             </div>

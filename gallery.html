@@ -232,11 +232,13 @@
         <script>
             let index = 0;
             const slides = document.querySelectorAll(".slide");
+            let timer;
         
             function showSlide(newIndex) {
                 slides.forEach(slide => slide.classList.remove("active"));
                 slides[newIndex].classList.add("active");
                 index = newIndex;
+                resetTimer();
             }
         
             function changeSlide(direction) {
@@ -244,8 +246,15 @@
                 showSlide(newIndex);
             }
         
-            setInterval(() => changeSlide(1), 5000); // Auto-change slide every 5 seconds
+            function resetTimer() {
+                clearInterval(timer);
+                timer = setInterval(() => changeSlide(1), 5000); // Restart timer
+            }
+        
+            // Start the timer initially
+            resetTimer();
         </script>
+        
 
         <!--Google Map End-->
  <br><br> <br>
